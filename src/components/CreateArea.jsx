@@ -2,17 +2,18 @@ import React , {useState} from "react";
 
 function CreateArea(props) {
   const [note, setContent]= useState({
+    
     title:"",
     content:""
   })
-  const [notesList,setNotesList]=useState([]);
+  
 
   
   function change(event){
     const {name,value}=event.target;
     // console.log(name);
     setContent(prevValue => {
-      console.log(prevValue);
+      // console.log(prevValue);
       return { 
         ...prevValue,
         [name]: value
