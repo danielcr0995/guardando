@@ -6,9 +6,13 @@ import notes from "../notes"
 import CreateArea from "./CreateArea"
 
 function App(){
+
+    function addNote(note){
+
+    }
     return (<div>
                 <Header/>
-                <CreateArea/>
+                <CreateArea onAdd={addNote} />
                 {notes.map(note =>(                  
                 <Note   
                     key={note.key}                 
