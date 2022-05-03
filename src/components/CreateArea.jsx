@@ -1,15 +1,14 @@
 import React , {useState} from "react";
 
 function CreateArea(props) {
-  const [note, setContent]= useState({
-    
+  const [note, setContent]= useState({    
     title:"",
     content:""
   })
   
 
   
-  function change(event){
+  function changeText(event){
     const {name,value}=event.target;
     // console.log(name);
     setContent(prevValue => {
@@ -35,8 +34,8 @@ function CreateArea(props) {
   return (
     <div>
       <form>
-        <input onChange={change} value={note.title} name="title" placeholder="Title" />
-        <textarea onChange={change} value={note.content} name="content" placeholder="Take a note..." rows="3" />
+        <input onChange={changeText} value={note.title} name="title" placeholder="Title" />
+        <textarea onChange={changeText} value={note.content} name="content" placeholder="Take a note..." rows="3" />
         <button onClick={submitNote}>Add</button>
       </form>
     </div>
